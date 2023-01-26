@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Seus treinos</ion-title>
+    <ion-icon slot="end" name="person-circle-outline"></ion-icon>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+
+  <ion-item *ngFor="let item of listaProdutos" (click)="goPaginaTreino(item.idexercicio)" button detail="true" detail-icon="chevron-forward-outline">
+
+    <ion-thumbnail slot="start">
+      <img src="{{item?.img}}" />
+    </ion-thumbnail>
+    <ion-label>
+      <h3>{{item?.treinoNome}}</h3>
+      <p>{{item?.categoriaNome}}</p>
+      <p>Detail icon set to caret-forward-outline</p>
+    </ion-label>
+  </ion-item>
+   
+</ion-list>
+</ion-content>

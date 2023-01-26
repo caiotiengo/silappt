@@ -1,0 +1,79 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-icon name="close-circle-outline"(click)="voltar()"></ion-icon>
+    <ion-button slot="end" style="height:30px">Finalizar</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="body-treino">
+    <ion-item lines="none">
+      <ion-label>
+        <h1>Treino de perna!</h1>
+        <p>Foco do treinamento: Massa muscular</p>
+      </ion-label>
+      <ion-thumbnail>
+        <img src="https://assets.sweat.com/html_body_blocks/images/010/024/160/original/BackToGymSWEAT_enf1f07a7f6f79e7b8807d2436a6ae8e8b.jpg?1625801317"/>
+      </ion-thumbnail>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <h1 class="h1-top-cards">5</h1>
+              <p class="p-top-cards">Dias de treinos</p>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <h1  class="h1-top-cards">32</h1>
+              <p class="p-top-cards">Treinamentos</p>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+  <div class="steps-ac">
+    <ion-item lines="none">
+      <ion-label>
+        <h5>Comece agora!</h5>
+      </ion-label>
+    </ion-item>
+    <ion-accordion-group [value]="['1']"  >
+      <ion-accordion *ngFor="let item of apiExemple[0].listaTreino" value="{{item?.idDia}}">
+        <ion-item slot="header" color="light">
+          <ion-label>{{item?.tituloAcc}}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+
+          <iframe *ngIf="item?.foto ==''" width="100%" height="300px" src="https://www.youtube.com/embed/m3F8OIx9n-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <img  *ngIf="item?.video ==''" src="{{item?.foto}}" />
+
+          <ion-item lines="none" style="text-align: center;">
+            <ion-label>
+              <h3>{{item?.textoExplicativo}}</h3>
+             </ion-label>
+          </ion-item>
+          <ion-list>
+            <ion-item  class="ion-no-padding" *ngFor="let itens of item.treinos">
+              <ion-label>
+                <h3>{{itens?.exerc}} </h3>
+                <p class="p-qtd">{{itens?.qtd}}</p>
+                <p class="p-obs">{{itens?.obs}}</p>
+              </ion-label>
+              
+            </ion-item>
+          </ion-list>
+        </div>   
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+   
+</ion-content>

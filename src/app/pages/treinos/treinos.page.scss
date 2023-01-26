@@ -1,0 +1,21 @@
+ion-toolbar{
+    --background:white;
+    ion-icon{
+        font-size: 33px;
+        margin-right: 2%;
+    }
+
+}
+
+ion-content{
+    ion-list{
+        ion-item{
+            ion-thumbnail{
+                img{
+                    border-radius: 5px;
+
+                }
+            }
+        }
+    }
+}

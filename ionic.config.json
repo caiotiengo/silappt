@@ -1,0 +1,7 @@
+{
+  "name": "silvaTeamApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

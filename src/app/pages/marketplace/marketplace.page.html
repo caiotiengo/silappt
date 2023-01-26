@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Marketplace</ion-title>
+    <ion-icon slot="end" name="person-circle-outline"></ion-icon>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10">
+        <ion-searchbar></ion-searchbar>
+      </ion-col>
+      <ion-col size="2">
+        <ion-icon style="padding: 14px;font-size: 30px;" name="filter-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-segment value="todos">
+    <ion-segment-button value="todos">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="musculacao">
+      <ion-label>Musculação</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="aerobico">
+      <ion-label>Aerobícos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="cards-section">
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let item of listaProdutos" size="6">
+              <ion-card (click)="modalTreinamento(item)"  style="--background: linear-gradient(rgba(222,224,205,0.2), rgba(255,157,80,0.9)),  url('{{item.img}}') no-repeat center/cover fixed">
+                <ion-card-content>
+                  <ion-card-subtitle>{{item?.categoriaNome}}</ion-card-subtitle>
+                  <ion-card-title> {{item?.treinoNome}}
+                  </ion-card-title>
+                </ion-card-content>
+                <ion-badge style="color: white;background: rgba(255,157,80,0.9)">Clique aqui</ion-badge>
+               </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </div>
+</ion-content>
