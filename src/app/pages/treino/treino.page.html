@@ -1,23 +1,21 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title></ion-title>
-    <ion-icon name="close-circle-outline"(click)="voltar()"></ion-icon>
+    <ion-icon name="chevron-back-outline" (click)="voltar()"></ion-icon>
     <ion-button slot="end" style="height:30px">Finalizar</ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Seus treinos</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
   <div class="body-treino">
-    <ion-item lines="none">
-      <ion-label>
-        <h1>Treino de perna!</h1>
-        <p>Foco do treinamento: Massa muscular</p>
-      </ion-label>
-      <ion-thumbnail>
-        <img src="https://assets.sweat.com/html_body_blocks/images/010/024/160/original/BackToGymSWEAT_enf1f07a7f6f79e7b8807d2436a6ae8e8b.jpg?1625801317"/>
-      </ion-thumbnail>
-    </ion-item>
+
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -41,14 +39,9 @@
 
   </div>
   <div class="steps-ac">
-    <ion-item lines="none">
-      <ion-label>
-        <h5>Comece agora!</h5>
-      </ion-label>
-    </ion-item>
     <ion-accordion-group [value]="['1']"  >
       <ion-accordion *ngFor="let item of apiExemple[0].listaTreino" value="{{item?.idDia}}">
-        <ion-item slot="header" color="light">
+        <ion-item lines="none"  slot="header" color="light">
           <ion-label>{{item?.tituloAcc}}</ion-label>
         </ion-item>
         <div class="ion-padding" slot="content">
@@ -62,7 +55,7 @@
              </ion-label>
           </ion-item>
           <ion-list>
-            <ion-item  class="ion-no-padding" *ngFor="let itens of item.treinos">
+            <ion-item lines="none"  class="ion-no-padding" *ngFor="let itens of item.treinos">
               <ion-label>
                 <h3>{{itens?.exerc}} </h3>
                 <p class="p-qtd">{{itens?.qtd}}</p>
@@ -75,5 +68,7 @@
       </ion-accordion>
     </ion-accordion-group>
   </div>
-   
+     <div class="styler">
+
+    </div>
 </ion-content>

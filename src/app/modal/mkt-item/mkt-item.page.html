@@ -1,10 +1,31 @@
 <ion-header class="ion-no-border">
   <ion-toolbar >
-    <ion-icon name="close-circle-outline" (click)="voltar()"></ion-icon>
-    <ion-title>{{data?.treinoNome}}</ion-title>
+    <ion-icon name="chevron-back-outline" (click)="voltar()"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>{{data?.treinoNome}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <img src="{{data?.img}}"/>
+  <div class="body-class">
+    <h1>Sobre o treinamento</h1>
+    <p>{{data?.descricao}}</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button  expand="block">Comprar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  expand="block" color="light">Treinar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="styler">
 
+  </div>
 </ion-content>

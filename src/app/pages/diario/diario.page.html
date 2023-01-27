@@ -1,9 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>diario</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Diário</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Jan 25, 2023</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <h5>Treinamento: Completo</h5>
+        <p>Estou sentindo o corpo relaxado, com energia</p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Jan 24, 2023</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <h5>Treinamento: Incompleto</h5>
+        <p>Estou sentindo o corpo relaxado, com energia</p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Jan 23, 2023</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <h5>Treinamento: Completo</h5>
+        <p>Estou sentindo o corpo relaxado, com energia</p>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <div class="styler">
 
+  </div>
 </ion-content>

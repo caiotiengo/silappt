@@ -31,14 +31,47 @@ ion-segment-button {
   
   /* Material Design styles */
   ion-segment-button.md {
-    --color: #000;
+    --color: #fff;
     //--color-checked: #08a391;
     --indicator-height: 4px;
   }
   
   /* iOS styles */
   ion-segment-button.ios {
-    //--color: #08a391;
+    --color: #fff;
     --color-checked: #fff;
     --border-style: none;
+    font-size: 16px;
+}
+ion-content{
+  --background:black
+}
+ion-searchbar{
+  --background: #fff !important;
+  color: black;
+}
+ion-icon{
+  color: white;
+}
+ion-toolbar{
+  --background: black !important;
+  ion-title{
+    --color:white;
   }
+}
+ion-item{
+  padding: 12px;
+  --border-radius: 12px;
+}
+ion-list{
+  background: transparent !important;
+}
+
+ion-accordion{
+  background: #fff;
+  border: 2px solid white;
+  
+  ion-icon{
+    color: black;
+  }
+}

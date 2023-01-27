@@ -1,9 +1,17 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>login</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content class="auth-form">
+  <ion-grid>
+    <img src="../assets/logo.png"/>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button expand="block" color="primary" (click)="abrirModalLogin()">Entrar</ion-button>
+        <span class="divider line one-line">ou</span>
+        <span class="already" style="color: white;">Ainda não é aluno Silva Team?</span>
+        <ion-button   expand="block" color="light"  (click)="abrirModalCadastro()">Veja nossos planos</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,9 +1,47 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>perfil</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <h1 class="h1-top-cards">53</h1>
+            <p class="p-top-cards">Total de treinos</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <h1  class="h1-top-cards">9</h1>
+            <p class="p-top-cards">Treinamentos</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button  expand="block">Como está hoje?</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="light">Sua alimentação</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="styler">
+
+  </div>
 </ion-content>

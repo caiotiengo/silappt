@@ -1,12 +1,15 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Seus treinos</ion-title>
-    <ion-icon slot="end" name="person-circle-outline"></ion-icon>
-
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Seus treinos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
 <ion-list>
 
   <ion-item *ngFor="let item of listaProdutos" (click)="goPaginaTreino(item.idexercicio)" button detail="true" detail-icon="chevron-forward-outline">
@@ -22,4 +25,7 @@
   </ion-item>
    
 </ion-list>
+<div class="styler">
+
+</div>
 </ion-content>

@@ -1,0 +1,23 @@
+ion-content{
+    .styler{
+        height: 25%;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        bottom: 0;
+        overflow: hidden;
+        border-top-right-radius: 85%;
+    }
+    ion-card-header{
+        text-align: center;
+    }
+    .h1-top-cards{
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    .p-top-cards{
+        margin-top: 0;
+    }
+}

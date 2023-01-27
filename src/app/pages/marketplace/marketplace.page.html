@@ -1,16 +1,21 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title>Marketplace</ion-title>
-    <ion-icon slot="end" name="person-circle-outline"></ion-icon>
   </ion-toolbar>
 
 </ion-header>
 
-<ion-content>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Marketplace</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-grid>
     <ion-row>
       <ion-col size="10">
-        <ion-searchbar></ion-searchbar>
+        <ion-searchbar placeholder="Buscar"></ion-searchbar>
       </ion-col>
       <ion-col size="2">
         <ion-icon style="padding: 14px;font-size: 30px;" name="filter-outline"></ion-icon>
@@ -44,5 +49,10 @@
             </ion-col>
           </ion-row>
         </ion-grid>
+  </div>
+
+
+  <div class="styler">
+
   </div>
 </ion-content>

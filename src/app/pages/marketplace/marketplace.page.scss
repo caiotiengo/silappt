@@ -8,7 +8,9 @@ ion-toolbar{
 }
 ion-content{
     ion-segment{
-        --background:transparent
+        --background:transparent;
+        height: 32px;
+        padding: 0px 12px;
     }
     ion-col{
         text-align: -webkit-center;
@@ -37,5 +39,14 @@ ion-content{
            border-radius: 0px;
        }
    }
-
+   .styler{
+        height: 25%;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        bottom: 0;
+        overflow: hidden;
+        border-top-right-radius: 85%;
+    }
 }

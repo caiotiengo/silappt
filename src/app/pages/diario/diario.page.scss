@@ -1,0 +1,22 @@
+ion-content{
+    .styler{
+        height: 25%;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        bottom: 0;
+        overflow: hidden;
+        border-top-right-radius: 85%;
+    }
+    ion-accordion{
+        background: transparent !important;
+        border: 2px solid transparent;
+        h5{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+    }
+}
